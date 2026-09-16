@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mooncake Festival 2026</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #fff;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(31, 20, 42, 0.48),
+            rgba(31, 20, 42, 0.55)
+        ),
+        url("https://i.pinimg.com/736x/93/30/62/9330621538d80b9783c39f2cbe9af295.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 35px;
+
+    background: rgba(25, 18, 40, 0.70);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 215, 130, 0.4);
+}
+
+.logo {
+    color: #ffd77a;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links button {
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    padding: 9px 17px;
+    border-radius: 30px;
+
+    font-family: Georgia, serif;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* POP-UP EFFECT */
+
+.nav-links button:hover {
+    transform: translateY(-6px) scale(1.08);
+
+    background: #d83a4b;
+
+    box-shadow:
+        0 8px 20px rgba(216, 58, 75, 0.45),
+        0 0 15px rgba(255, 215, 122, 0.25);
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.moon {
+    font-size: 85px;
+
+    filter:
+        drop-shadow(0 0 15px rgba(255,220,150,0.8));
+
+    animation: floatMoon 3s ease-in-out infinite;
+}
+
+@keyframes floatMoon {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+
+    color: #ffd77a;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.4);
+
+    margin: 10px 0;
+}
+
+.hero h2 {
+    color: #ffc6a5;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 720px;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+    color: #fff5e7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-button {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d83a4b,
+            #a51f38
+        );
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 35px;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.main-button:hover {
+    transform:
+        translateY(-8px)
+        scale(1.08);
+
+    box-shadow:
+        0 15px 30px rgba(216,58,75,0.45),
+        0 0 20px rgba(255,215,122,0.3);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+
+    color: #ffd77a;
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,0.4);
+}
+
+.section-subtitle {
+    text-align: center;
+
+    color: #ffc6a5;
+
+    font-style: italic;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   GLASS CARDS
+========================= */
+
+.card {
+    background:
+        rgba(255,255,255,0.14);
+
+    backdrop-filter: blur(10px);
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    border-radius: 25px;
+
+    padding: 32px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.20);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    background:
+        rgba(255,255,255,0.20);
+}
+
+.card h3 {
+    color: #ffd77a;
+
+    margin-bottom: 15px;
+
+    font-size: 25px;
+}
+
+.card p {
+    line-height: 1.8;
+
+    color: #fff5e7;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.story-card {
+    background:
+        rgba(255,255,255,0.13);
+
+    backdrop-filter: blur(10px);
+
+    border:
+        1px solid rgba(255,215,122,0.35);
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.25),
+        0 0 20px rgba(255,215,122,0.12);
+}
+
+.story-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+.story-card h3 {
+    color: #ffd77a;
+
+    margin-bottom: 12px;
+}
+
+.story-card p {
+    color: #fff5e7;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FESTIVAL EVENT
+========================= */
+
+.event-box {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(154,30,54,0.80),
+            rgba(45,53,96,0.75)
+        );
+
+    backdrop-filter: blur(10px);
+
+    border:
+        1px solid rgba(255,215,122,0.45);
+
+    border-radius: 30px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.3);
+}
+
+.event-box::before {
+    content: "🌙";
+
+    position: absolute;
+
+    right: 25px;
+    top: 15px;
+
+    font-size: 70px;
+
+    opacity: 0.25;
+}
+
+.event-box h2 {
+    font-size: 36px;
+
+    color: #ffd77a;
+
+    margin-bottom: 15px;
+}
+
+.event-date {
+    font-size: 25px;
+
+    color: #ffc6a5;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.event-box p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activities {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.activity {
+    padding: 32px 22px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* DIFFERENT COLORS */
+
+.activity:nth-child(1) {
+    background:
+        rgba(207, 65, 80, 0.65);
+
+    border:
+        1px solid #ff9c9c;
+}
+
+.activity:nth-child(2) {
+    background:
+        rgba(45, 117, 105, 0.65);
+
+    border:
+        1px solid #9de0c9;
+}
+
+.activity:nth-child(3) {
+    background:
+        rgba(72, 78, 145, 0.70);
+
+    border:
+        1px solid #b8bcff;
+}
+
+.activity:hover {
+    transform:
+        translateY(-10px)
+        scale(1.04);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.3);
+}
+
+.activity-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.activity h3 {
+    color: #fff0bd;
+
+    margin-bottom: 12px;
+}
+
+.activity p {
+    line-height: 1.6;
+
+    color: #fff;
+}
+
+
+/* =========================
+   GAMES
+========================= */
+
+.quiz-box {
+    max-width: 750px;
+
+    margin: auto;
+
+    background:
+        rgba(30, 25, 55, 0.70);
+
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(255,215,122,0.4);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.3);
+}
+
+.question-number {
+    color: #ffc6a5;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+#question {
+    font-size: 25px;
+
+    color: #ffd77a;
+
+    margin-bottom: 25px;
+
+    line-height: 1.4;
+}
+
+.answers {
+    display: grid;
+
+    gap: 12px;
+}
+
+.answer {
+    background:
+        rgba(255,255,255,0.10);
+
+    color: white;
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.answer:hover {
+    transform:
+        translateX(8px)
+        scale(1.02);
+
+    background:
+        rgba(216,58,75,0.65);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.25);
+}
+
+.answer.correct {
+    background: rgba(54,150,100,0.75);
+
+    border-color: #9de0c9;
+}
+
+.answer.wrong {
+    background: rgba(190,50,65,0.75);
+
+    border-color: #ff9c9c;
+}
+
+#result {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #ffd77a;
+}
+
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        rgba(20,15,35,0.55);
+
+    backdrop-filter: blur(10px);
+
+    border-top:
+        1px solid rgba(255,215,122,0.25);
+}
+
+.social h3 {
+    color: #ffd77a;
+
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+.social-buttons a {
+    text-decoration: none;
+
+    color: white;
+
+    padding: 11px 22px;
+
+    border-radius: 25px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* SOCIAL COLORS */
+
+.social-buttons a:nth-child(1) {
+    background: #111;
+}
+
+.social-buttons a:nth-child(2) {
+    background:
+        linear-gradient(
+            135deg,
+            #f58529,
+            #dd2a7b,
+            #8134af
+        );
+}
+
+.social-buttons a:nth-child(3) {
+    background: #168c4b;
+}
+
+.social-buttons a:hover {
+    transform:
+        translateY(-7px)
+        scale(1.08);
+
+    box-shadow:
+        0 10px 22px rgba(0,0,0,0.35);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #e9d7c0;
+
+    font-size: 14px;
+
+    background:
+        rgba(15,10,25,0.65);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links button {
+        padding: 8px 7px;
+
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        letter-spacing: 2px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .story-grid,
+    .activities {
+        grid-template-columns: 1fr;
+    }
+
+    .event-box {
+        padding: 35px 20px;
+    }
+
+    .event-box h2 {
+        font-size: 28px;
+    }
+
+    .quiz-box {
+        padding: 25px 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        🥮 MOONCAKE FESTIVAL
+    </div>
+
+    <div class="nav-links">
+
+        <button onclick="showPage('home')">
+            HOME
+        </button>
+
+        <button onclick="showPage('festival')">
+            FESTIVAL
+        </button>
+
+        <button onclick="showPage('games')">
+            GAMES
+        </button>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="moon">
+            🌕
+        </div>
+
+        <h1>
+            MOONCAKE<br>
+            FESTIVAL
+        </h1>
+
+        <h2>
+            The Festival Between the Moon and Us
+        </h2>
+
+        <p>
+            A celebration of the full moon, family reunion,
+            Chinese culture, and the timeless legend of
+            Chang'e and Houyi.
+        </p>
+
+        <button
+            class="main-button"
+            onclick="showPage('festival')">
+
+            EXPLORE THE FESTIVAL →
+
+        </button>
+
+    </div>
+
+
+
+    <div class="container">
+
+        <h2 class="section-title">
+            What is Mooncake Festival?
+        </h2>
+
+        <p class="section-subtitle">
+            A festival celebrated under the brightest moon
+        </p>
+
+
+        <div class="card">
+
+            <h3>
+                🌕 The Mid-Autumn Festival
+            </h3>
+
+            <p>
+                The Mooncake Festival, also known as the
+                Mid-Autumn Festival, is a traditional Chinese
+                festival celebrated on the 15th day of the
+                eighth month of the lunar calendar.
+            </p>
+
+            <br>
+
+            <p>
+                The full moon symbolizes reunion and
+                togetherness. Families traditionally gather,
+                admire the moon, share mooncakes, and enjoy
+                meaningful moments together.
+            </p>
+
+        </div>
+
+
+
+        <h2 class="section-title">
+            The Legend of Chang'e
+        </h2>
+
+        <p class="section-subtitle">
+            A story passed down through generations
+        </p>
+
+
+
+        <div class="story-grid">
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    🏹
+                </div>
+
+                <h3>
+                    Houyi, the Archer
+                </h3>
+
+                <p>
+                    Long ago, ten suns appeared in the sky,
+                    causing great suffering on Earth.
+                    Houyi, a legendary archer, shot down
+                    nine of them and saved the people.
+                </p>
+
+            </div>
+
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    💊
+                </div>
+
+                <h3>
+                    The Elixir
+                </h3>
+
+                <p>
+                    As a reward for his heroic act, Houyi
+                    received an elixir that could grant
+                    immortality. He kept it safely because
+                    he did not want to leave Chang'e.
+                </p>
+
+            </div>
+
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    🌙
+                </div>
+
+                <h3>
+                    Chang'e and the Moon
+                </h3>
+
+                <p>
+                    One day, Chang'e drank the elixir and
+                    floated toward the moon. She eventually
+                    became closely associated with the moon.
+                </p>
+
+            </div>
+
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    🥮
+                </div>
+
+                <h3>
+                    Remembering Chang'e
+                </h3>
+
+                <p>
+                    During the festival, people admire the
+                    full moon and enjoy mooncakes while
+                    celebrating traditions connected with
+                    this ancient legend.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="social">
+
+        <h3>
+            Follow Our Festival
+        </h3>
+
+        <div class="social-buttons">
+
+            <a href="https://www.tiktok.com/"
+               target="_blank">
+                TikTok
+            </a>
+
+            <a href="https://www.instagram.com/"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        © 2026 Mooncake Festival
+    </footer>
+
+</section>
+
+
+
+<!-- =====================================================
+     FESTIVAL
+===================================================== -->
+
+<section id="festival" class="page">
+
+    <div class="container">
+
+        <h1 class="section-title">
+            OUR FESTIVAL
+        </h1>
+
+        <p class="section-subtitle">
+            Celebrate culture, creativity, and togetherness
+        </p>
+
+
+
+        <div class="event-box">
+
+            <h2>
+                MOONCAKE FESTIVAL 2026
+            </h2>
+
+            <div class="event-date">
+                25 SEPTEMBER 2026
+            </div>
+
+            <p>
+                SMA BPK PENABUR HOLIS
+            </p>
+
+            <br>
+
+            <p>
+                Join us for a day filled with Chinese culture,
+                creativity, performances, and fun activities!
+            </p>
+
+        </div>
+
+
+
+        <h2 class="section-title">
+            Festival Activities
+        </h2>
+
+        <p class="section-subtitle">
+            Three ways to celebrate the festival
+        </p>
+
+
+
+        <div class="activities">
+
+
+            <div class="activity">
+
+                <div class="activity-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Storytelling Competition
+                </h3>
+
+                <p>
+                    Bring stories to life and share the
+                    legendary world of Chang'e and Houyi
+                    through creative storytelling.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity">
+
+                <div class="activity-icon">
+                    🎤
+                </div>
+
+                <h3>
+                    Singing Competition
+                </h3>
+
+                <p>
+                    Show your talent, express yourself,
+                    and enjoy music together through
+                    an exciting singing competition.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity">
+
+                <div class="activity-icon">
+                    🏮
+                </div>
+
+                <h3>
+                    Chinese Culture Exhibition
+                </h3>
+
+                <p>
+                    Explore Chinese traditions, art,
+                    history, and cultural elements through
+                    an interactive exhibition.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card"
+             style="margin-top:40px; text-align:center;">
+
+            <h3>
+                🥮 More Than Just Mooncakes
+            </h3>
+
+            <p>
+                The Mooncake Festival is a chance to learn,
+                perform, create, and celebrate culture together.
+                Come and experience the festival with us!
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="social">
+
+        <h3>
+            Stay Connected
+        </h3>
+
+        <div class="social-buttons">
+
+            <a href="https://www.tiktok.com/@smakholis?_r=1&_t=ZS-99lxSG4tJRs"
+               target="_blank">
+                TikTok
+            </a>
+
+            <a href="https://www.instagram.com/smabpkpenaburholis?stkn=MmR3eHo2MnU5cG5p"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/6282126609100"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        © 2026 Mooncake Festival —
+        SMA BPK PENABUR HOLIS
+    </footer>
+
+</section>
+
+
+
+<!-- =====================================================
+     GAMES
+===================================================== -->
+
+<section id="games" class="page">
+
+    <div class="container">
+
+        <h1 class="section-title">
+            🥮 MOONCAKE QUIZ
+        </h1>
+
+        <p class="section-subtitle">
+            How much do you know about the Mooncake Festival?
+        </p>
+
+
+
+        <div class="quiz-box">
+
+            <div
+                class="question-number"
+                id="questionNumber">
+
+                Question 1 of 5
+
+            </div>
+
+
+            <div id="question">
+                Loading question...
+            </div>
+
+
+            <div
+                class="answers"
+                id="answers">
+            </div>
+
+
+            <div id="result">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="social">
+
+        <h3>
+            Follow Our Festival
+        </h3>
+
+        <div class="social-buttons">
+
+            <a href="https://www.tiktok.com/"
+               target="_blank">
+                TikTok
+            </a>
+
+            <a href="https://www.instagram.com/"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        © 2026 Mooncake Festival
+    </footer>
+
+</section>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+function showPage(pageName) {
+
+    const pages =
+        document.querySelectorAll(".page");
+
+    pages.forEach(function(page) {
+
+        page.classList.remove("active");
+
+    });
+
+
+    document
+        .getElementById(pageName)
+        .classList.add("active");
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+
+/* =========================
+   QUIZ QUESTIONS
+========================= */
+
+const questions = [
+
+    {
+        question:
+        "When is the Mooncake Festival traditionally celebrated?",
+
+        answers: [
+            "15th day of the 8th lunar month",
+            "1st day of the 1st lunar month",
+            "25th day of the 12th lunar month",
+            "7th day of the 7th lunar month"
+        ],
+
+        correct: 0
+    },
+
+
+    {
+        question:
+        "What does the full moon symbolize during the festival?",
+
+        answers: [
+            "Competition",
+            "Reunion and togetherness",
+            "Good weather",
+            "Victory"
+        ],
+
+        correct: 1
+    },
+
+
+    {
+        question:
+        "Who is the legendary archer in the story of Chang'e?",
+
+        answers: [
+            "Nezha",
+            "Sun Wukong",
+            "Houyi",
+            "Guan Yu"
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        question:
+        "What food is strongly associated with the festival?",
+
+        answers: [
+            "Dumplings",
+            "Mooncakes",
+            "Noodles",
+            "Tangyuan"
+        ],
+
+        correct: 1
+    },
+
+
+    {
+        question:
+        "Who is traditionally associated with the moon in the famous legend?",
+
+        answers: [
+            "Chang'e",
+            "Mulan",
+            "Xi Wangmu",
+            "Nüwa"
+        ],
+
+        correct: 0
+    }
+
+];
+
+
+let currentQuestion = 0;
+
+let score = 0;
+
+
+
+/* =========================
+   LOAD QUESTION
+========================= */
+
+function loadQuestion() {
+
+    const q =
+        questions[currentQuestion];
+
+
+    document
+        .getElementById("questionNumber")
+        .textContent =
+        "Question " +
+        (currentQuestion + 1) +
+        " of " +
+        questions.length;
+
+
+    document
+        .getElementById("question")
+        .textContent =
+        q.question;
+
+
+    document
+        .getElementById("result")
+        .textContent = "";
+
+
+    const answersContainer =
+        document.getElementById("answers");
+
+
+    answersContainer.innerHTML = "";
+
+
+    q.answers.forEach(
+        function(answer, index) {
+
+            const button =
+                document.createElement("button");
+
+
+            button.className =
+                "answer";
+
+
+            button.textContent =
+                answer;
+
+
+            button.onclick =
+                function() {
+
+                    checkAnswer(
+                        index,
+                        button
+                    );
+
+                };
+
+
+            answersContainer
+                .appendChild(button);
+
+        }
+    );
+
+}
+
+
+
+/* =========================
+   CHECK ANSWER
+========================= */
+
+function checkAnswer(
+    selected,
+    button
+) {
+
+    const buttons =
+        document.querySelectorAll(
+            ".answer"
+        );
+
+
+    buttons.forEach(
+        function(btn) {
+
+            btn.disabled = true;
+
+        }
+    );
+
+
+    if (
+        selected ===
+        questions[currentQuestion].correct
+    ) {
+
+        button.classList
+            .add("correct");
+
+        score++;
+
+    }
+
+    else {
+
+        button.classList
+            .add("wrong");
+
+
+        buttons[
+            questions[currentQuestion].correct
+        ]
+        .classList
+        .add("correct");
+
+    }
+
+
+    setTimeout(
+        function() {
+
+            currentQuestion++;
+
+
+            if (
+                currentQuestion <
+                questions.length
+            ) {
+
+                loadQuestion();
+
+            }
+
+            else {
+
+                showFinalScore();
+
+            }
+
+        },
+        900
+    );
+
+}
+
+
+
+/* =========================
+   FINAL SCORE
+========================= */
+
+function showFinalScore() {
+
+    document
+        .getElementById("questionNumber")
+        .textContent =
+        "QUIZ COMPLETE!";
+
+
+    document
+        .getElementById("question")
+        .textContent =
+        "You got " +
+        score +
+        " out of " +
+        questions.length +
+        " questions correct! 🥮";
+
+
+    document
+        .getElementById("answers")
+        .innerHTML =
+        '<button class="main-button" onclick="restartQuiz()">PLAY AGAIN</button>';
+
+
+    document
+        .getElementById("result")
+        .textContent =
+        score === questions.length
+        ? "Perfect! 🌕✨"
+        : "Great job! Try again to improve your score!";
+
+}
+
+
+
+/* =========================
+   RESTART
+========================= */
+
+function restartQuiz() {
+
+    currentQuestion = 0;
+
+    score = 0;
+
+    loadQuestion();
+
+}
+/* =========================
+   START
+========================= */
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
