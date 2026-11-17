@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Deby Febryana Angelie — CV</title>
+  <style>
+    :root{
+      --purple-1: #4b0082;
+      --purple-2: #6a1b9a;
+      --accent: #f3e8ff;
+      --card-bg: rgba(255,255,255,0.06);
+      --glass: rgba(255,255,255,0.06);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.8);
+      --shadow: 0 8px 24px rgba(0,0,0,0.35);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(180deg,var(--purple-1),var(--purple-2));
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:40px auto;
+      padding:28px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border-radius:14px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:24px;
+      align-items:start;
+      backdrop-filter: blur(6px);
+    }
+
+    /* Sidebar */
+    .sidebar{
+      padding:18px;
+      border-radius:10px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    }
+
+    .avatar{
+      width:100%;
+      height:220px;
+      border-radius:10px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent);
+      font-weight:700;
+      font-size:20px;
+      margin-bottom:16px;
+    }
+
+    h1{
+      margin:0 0 6px 0;
+      font-size:22px;
+      letter-spacing:0.2px;
+    }
+    .tagline{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .contact, .skills, .languages{
+      margin-bottom:18px;
+    }
+    .contact p, .skills p, .languages p{
+      margin:6px 0;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .skill-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .skill{
+      background: rgba(255,255,255,0.06);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--accent);
+    }
+
+    /* Main content */
+    .main{
+      padding:6px 4px;
+    }
+
+    .section{
+      margin-bottom:18px;
+      padding-bottom:8px;
+      border-bottom:1px dashed rgba(255,255,255,0.04);
+    }
+
+    .section h3{
+      margin:0 0 8px 0;
+      font-size:18px;
+      color:#fff;
+    }
+
+    .about p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .experience-item, .achievement-item{
+      margin-bottom:12px;
+    }
+    .experience-item h4, .achievement-item h4{
+      margin:0;
+      font-size:15px;
+      color:var(--accent);
+    }
+    .experience-item .meta, .achievement-item .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+    .experience-item ul{
+      margin:6px 0 0 18px;
+      color:var(--muted);
+    }
+
+    /* language bars */
+    .lang-row{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:8px 0;
+    }
+    .lang-name{ width:110px; font-size:14px; color:var(--muted); }
+    .bar{
+      height:10px;
+      background: rgba(255,255,255,0.06);
+      border-radius:999px;
+      flex:1;
+      overflow:hidden;
+    }
+    .bar > i{
+      display:block;
+      height:100%;
+      background: linear-gradient(90deg,#ffd6ff,#d1b3ff);
+      border-radius:999px;
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card{ grid-template-columns: 1fr; }
+      .avatar{ height:160px; }
+    }
+
+    /* small print */
+    .footer-note{
+      margin-top:12px;
+      font-size:12px;
+      color:rgba(255,255,255,0.6);
+    }
+
+    /* print-friendly */
+    @media print{
+      body{ background: #fff; color:#000; }
+      .card{ box-shadow:none; background:#fff; color:#000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="main">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="avatar" aria-hidden="true">DEBY F. A.</div>
+
+        <h1>Deby Febryana Angelie</h1>
+        <div class="tagline">16-year-old student • Art & Languages enthusiast</div>
+
+        <div class="contact">
+          <strong>Contact</strong>
+          <p>Phone: <span style="color:var(--accent)">+62 81221806866</span></p>
+          <p>Email: <span style="color:var(--accent)">debydeby675@gmail.com</span></p>
+        </div>
+
+        <div class="skills">
+          <strong>Skills</strong>
+          <div class="skill-list" aria-hidden="false">
+            <span class="skill">Leadership</span>
+            <span class="skill">Teamwork</span>
+            <span class="skill">Time management</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Creativity</span>
+            <span class="skill">Problem solving</span>
+            <span class="skill">Adaptability</span>
+            <span class="skill">Critical thinking</span>
+            <span class="skill">Negotiation</span>
+            <span class="skill">Working under pressure</span>
+          </div>
+        </div>
+
+        <div class="languages">
+          <strong>Languages</strong>
+          <div class="lang-row"><div class="lang-name">Indonesian</div><div class="bar"><i style="width:100%"></i></div></div>
+          <div class="lang-row"><div class="lang-name">English</div><div class="bar"><i style="width:85%"></i></div></div>
+          <div class="lang-row"><div class="lang-name">Mandarin</div><div class="bar"><i style="width:70%"></i></div></div>
+          <p style="margin-top:8px;color:var(--muted)">Certifications: IELTS 6.5; TOCFL A2</p>
+        </div>
+
+        <div class="footer-note">Download / print friendly • Edit content in the HTML</div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main" aria-label="Main content">
+        <section class="section about" id="about">
+          <h3>About Me</h3>
+          <p>Hi, I'm <strong>Deby Febryana Angelie</strong>, a 16-year-old student who is passionate about learning, especially in subjects like art and languages. I consider myself responsible, motivated, and a good team player who enjoys listening and contributing actively.</p>
+        </section>
+
+        <section class="section" id="experience">
+          <h3>Experience</h3>
+
+          <div class="experience-item">
+            <h4>SMA BPK PENABUR HOLIS — Pengurus Bidang 8 OSIS Hebron</h4>
+            <div class="meta">2025 — Now</div>
+            <ul>
+              <li>Berpartisipasi dalam membentuk program dan pelaksanaan program mengenai budaya terutama budaya China.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>ELITE PRO MANDARIN — SMA BPK PENABUR HOLIS</h4>
+            <div class="meta">2025 — Now</div>
+            <ul>
+              <li>Berpartisipasi dalam membentuk konten edukasi bahasa Mandarin & budaya China.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>MPK — SMP BPK PENABUR HOLIS</h4>
+            <div class="meta">2024 — 2025</div>
+            <ul>
+              <li>Menjadi perwakilan kelas (ketua kelas) dan membantu proses pemilihan OSIS 24/25 (wawancara).</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Koordinator Bidang 10 OSIS Hebron — SMP BPK PENABUR HOLIS</h4>
+            <div class="meta">2023 — 2024</div>
+            <ul>
+              <li>Mengkoordinir program yang berkaitan dengan penggunaan bahasa Inggris dan Mandarin di lingkungan sekolah.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Pengurus Bidang 6 OSIS Hebron — SMP BPK PENABUR HOLIS</h4>
+            <div class="meta">2022 — 2023</div>
+            <ul>
+              <li>Berpartisipasi dalam program keterampilan dan kewirausahaan.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section" id="achievements">
+          <h3>Achievements</h3>
+
+          <div class="achievement-item">
+            <h4>James Dyson Prototyping Award</h4>
+            <div class="meta">IDEX (Anglo Chinese School Independent) — 2024</div>
+          </div>
+
+          <div class="achievement-item">
+            <h4>Silver Medal — ASEAN English Literacy Competition (ASLIC)</h4>
+            <div class="meta">Mentari — 2024</div>
+          </div>
+
+          <div class="achievement-item">
+            <h4>Gold Medal — OMSIN (Matematika)</h4>
+            <div class="meta">Hamsae Institute — 2025</div>
+          </div>
+
+          <div class="achievement-item">
+            <h4>Top 3 Graduate — SMP BPK PENABUR HOLIS</h4>
+            <div class="meta">Beasiswa BPK PENABUR BANDUNG — 2025</div>
+          </div>
+
+          <div class="achievement-item">
+            <h4>Juara 2 Poster Tani Sejiwa</h4>
+            <div class="meta">Universitas Islam Malang — 2025</div>
+          </div>
+        </section>
+
+        <section class="section" id="extra">
+          <h3>Other</h3>
+          <p style="color:var(--muted)">Available for school projects, language & cultural programs, and creative collaborations. References available upon request.</p>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Optional: small script to enable quick copy of email or phone -->
+  <script>
+    // Simple enhancement: click email to copy
+    document.addEventListener('click', function(e){
+      const t = e.target;
+      if(t && t.matches && t.matches('span') && t.textContent && t.textContent.includes('@')){
+        navigator.clipboard?.writeText(t.textContent).then(()=> {
+          const old = t.textContent;
+          t.textContent = 'Copied!';
+          setTimeout(()=> t.textContent = old, 1200);
+        }).catch(()=>{ /* ignore */ });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keiko Agatha — CV</title>
+
+  <style>
+    @font-face {
+      font-family: "Sabrina";
+      src: local("Sabrina"), url("fonts/Sabrina.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "LaMatinale";
+      src: local("La Matinale"), url("fonts/LaMatinale.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root{
+      --brown: #694A47;
+      --teal: #96C1C5;
+      --cream: #FFF0DE;
+      --card-radius: 14px;
+      --max-width: 980px;
+    }
+
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: var(--teal);
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,240,222,0.12) 0 2px, transparent 3px),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><g fill='%23FFF0DE'><path d='M10 6c0-2 3-4 6-1 3-3 6-1 6 1 0 3-4 6-6 8-2-2-6-5-6-8z'/></g></svg>");
+      background-repeat: repeat;
+      color: var(--brown);
+      padding: 48px 20px;
+    }
+
+    .wrap{
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,240,222,0.98), rgba(255,240,222,0.96));
+      border-radius: var(--card-radius);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 22px;
+      border: 2px solid rgba(105,74,71,0.06);
+    }
+
+    .profile{ position: relative; overflow: visible; }
+
+    /* Avatar with photo */
+    .avatar{
+      height: 120px;
+      width: 120px;
+      border-radius: 18px;
+      background: linear-gradient(135deg,var(--brown), #8a5f5d);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: #fff;
+      font-family: "Sabrina", Georgia, serif;
+      font-size: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      margin-bottom: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 14px;
+      border: 3px solid rgba(255,240,222,0.6);
+    }
+
+    .avatar .initials{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Sabrina", Georgia, serif;
+      font-size: 28px;
+      color: #fff;
+      background: linear-gradient(135deg,var(--brown), #8a5f5d);
+    }
+
+    h1.title{
+      font-family: "Sabrina", Georgia, serif;
+      font-size: 28px;
+      margin: 0 0 6px 0;
+      color: #fff;
+      background: var(--brown);
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 10px;
+    }
+
+    .subtitle{
+      font-family: "LaMatinale", Georgia, serif;
+      color: var(--brown);
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .contact{ margin-top: 14px; font-size: 14px; line-height: 1.5; }
+    .contact strong{ color: var(--brown); }
+
+    .content{ display:flex; flex-direction:column; gap: 18px; }
+
+    .section-title{
+      font-family: "LaMatinale", Georgia, serif;
+      color: var(--brown);
+      font-size: 16px;
+      margin-bottom: 8px;
+      letter-spacing: 0.6px;
+    }
+
+    .skills{ display:flex; gap:10px; flex-wrap:wrap; }
+    .chip{
+      background: rgba(105,74,71,0.08);
+      color: var(--brown);
+      padding:6px 10px;
+      border-radius: 999px;
+      font-size:13px;
+      border:1px solid rgba(105,74,71,0.06);
+    }
+
+    .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    ul.clean{ margin:0; padding:0; list-style:none; }
+    ul.clean li{ margin-bottom:8px; font-size:14px; }
+
+    .decor{ position:absolute; right:-36px; top:-36px; width:160px; height:160px; pointer-events:none; transform: rotate(-12deg); z-index:0; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08)); }
+    .decor svg{ width:100%; height:100%; }
+
+    @media print{
+      body{ background: white; color: black; }
+      .wrap{ grid-template-columns: 320px 1fr; gap: 12px; }
+      .avatar{ box-shadow:none; }
+      .decor{ display:none; }
+      h1.title{ background: none; color: black; padding:0; }
+      .card{ border: 1px solid #ddd; box-shadow:none; }
+    }
+
+    @media (max-width:880px){
+      .wrap{ grid-template-columns: 1fr; }
+      .decor{ display:none; }
+      .avatar{ margin: 0 auto 12px; }
+      .title{ display:block; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- LEFT -->
+    <aside class="card profile">
+      <div class="decor" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse">
+              <rect width="8" height="8" fill="#FFF0DE"/>
+              <circle cx="4" cy="4" r="1.2" fill="#694A47"/>
+            </pattern>
+            <pattern id="stars" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect width="20" height="20" fill="#96C1C5"/>
+              <path d="M10 3 L11.5 8 L16 8.5 L12 11.5 L13 16 L10 13.8 L7 16 L8 11.5 L4 8.5 L8.5 8 Z" fill="#FFF0DE"/>
+            </pattern>
+          </defs>
+          <g transform="translate(10,10)">
+            <path class="shape-1" d="M10 60 Q40 10 100 20 Q160 30 180 80 Q150 140 80 150 Q20 140 10 60Z" fill="url(#dots)"/>
+            <path class="shape-2" d="M30 30 Q70 0 120 20 Q160 40 140 80 Q120 120 60 120 Q20 100 30 30Z" fill="url(#stars)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div style="position:relative; z-index:2;">
+        <!-- Ganti "photo.jpg" sesuai nama file foto yang kamu simpan -->
+        <div class="avatar">
+          <img src="photo.jpg" alt="Foto Keiko" />
+          <span class="initials">KA</span>
+        </div>
+
+        <h1 class="title">Keiko Agatha</h1>
+        <div class="subtitle">Creative Student • Illustration & Design</div>
+
+        <div class="contact" style="margin-top:12px;">
+          <div><strong>Lokasi</strong> Bandung</div>
+          <div><strong>Telepon</strong> 085315769778</div>
+          <div><strong>Email</strong> keikoryujican@gmail.com</div>
+          <div><strong>IG</strong> @kiko_agatha</div>
+        </div>
+
+        <hr style="border:none;border-top:1px dashed rgba(105,74,71,0.08);margin:14px 0;">
+
+        <div>
+          <div class="section-title">Skills</div>
+          <div class="skills">
+            <span class="chip">Canva</span>
+            <span class="chip">Design</span>
+            <span class="chip">Creativity</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Leadership</span>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px dashed rgba(105,74,71,0.08);margin:14px 0;">
+
+        <div>
+          <div class="section-title">Education</div>
+          <ul class="clean">
+            <li><strong>SD Talenta</strong> (2017–2022)</li>
+            <li><strong>SMP BPK PENABUR HOLIS</strong> (2022–2025)</li>
+            <li><strong>SMA BPK PENABUR HOLIS</strong> (2025–2027)</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT -->
+    <main class="content">
+      <div class="card">
+        <div class="section-title">Ringkasan</div>
+        <p style="margin:0 0 8px 0;">
+          Siswa kreatif dengan pengalaman mengajar seni untuk anak panti asuhan, mengorganisir event dekorasi, dan proyek usaha kecil (keychain homemade). Aktif di OSIS dan berprestasi di lomba seni serta kompetisi akademik.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">Pengalaman</div>
+        <div class="two-col">
+          <div>
+            <h4 style="margin:0 0 6px 0;font-family:LaMatinale,Georgia,serif;color:var(--brown);">IBT Teacher — Laskar Bandoeng</h4>
+            <div style="font-size:14px;color:#333">2024–2026</div>
+            <p style="margin-top:8px;font-size:14px;">Mengajarkan anak-anak panti asuhan mengenai seni rupa yang menyenangkan dan informatif.</p>
+          </div>
+          <div>
+            <h4 style="margin:0 0 6px 0;font-family:LaMatinale,Georgia,serif;color:var(--brown);">Koordinator Event Stages</h4>
+            <div style="font-size:14px;color:#333">2024–2025</div>
+            <p style="margin-top:8px;font-size:14px;">Desain dan dekorasi stage untuk kompetisi dance dan perayaan kelulusan.</p>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px dashed rgba(105,74,71,0.06);margin:12px 0;">
+
+        <div>
+          <h4 style="margin:0 0 6px 0;font-family:LaMatinale,Georgia,serif;color:var(--brown);">Projek & Kepanitiaan</h4>
+          <ul class="clean">
+            <li><strong>Keychain Homemade</strong> — merancang, mempromosikan, produksi; terjual &gt;30 unit.</li>
+            <li><strong>Koordinator Buku Tahunan</strong> — desain topik, memimpin alur pembuatan.</li>
+            <li><strong>Panitia Lomba Mewarnai</strong> — memandu teknis lomba dan evaluasi.</li>
+            <li><strong>Anggota OSIS</strong> — pembinaan prestasi akademik & keagamaan.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">Prestasi</div>
+        <ul class="clean">
+          <li><strong>1st Winner</strong> Painting Competition — 3FEX (2025)</li>
+          <li><strong>Gold Medal</strong> Youth Change Maker Summit (2025)</li>
+          <li><strong>Silver Medal</strong> International Kangaroo Mathematics Contest (2025)</li>
+          <li><strong>Runner Up</strong> Illustration Competition Pasar Seni ITB (2025)</li>
+          <li><strong>Runner Up</strong> Poster Competition, Tanisejiwa, UNISMA (2026)</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Sembunyikan inisial jika foto berhasil dimuat; tampilkan inisial jika foto gagal
+    document.addEventListener('DOMContentLoaded', function(){
+      const img = document.querySelector('.avatar img');
+      const initials = document.querySelector('.avatar .initials');
+      if(!img) return;
+      img.addEventListener('load', () => {
+        if(initials) initials.style.display = 'none';
+      });
+      img.addEventListener('error', () => {
+        if(img) img.style.display = 'none';
+        if(initials) initials.style.display = 'flex';
+      });
+    });
+  </script>
+</body>
+</html>
